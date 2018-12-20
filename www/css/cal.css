@@ -1,0 +1,152 @@
+@charset "utf-8";
+/*コピペボタンデザイン*/
+/*https://saruwakakun.com/html-css/reference/buttons*/
+.square_btn {
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #03A9F4;/*色*/
+    border: solid 1px #0f9ada;/*線色*/
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.square_btn:active {/*押したとき*/
+    border: solid 1px #03A9F4;
+    box-shadow: none;
+    text-shadow: none;
+}
+/*end*/
+#btn1{
+    margin:0px 156px 0px 0px;
+}
+#tuki{
+    border:solid 3px #00ffff;
+    background:gold;
+    padding:30px 30px;
+    border-radius:10px 10px 10px 10px;
+}
+#spe{
+    padding:0px 88px 0px 0px;
+}
+#day{
+    padding:0px 45px 0px 0px;
+    margin:0px 0px 0px 0px;
+    
+}
+#man{
+    border:solid 3px #00ffff;
+    padding-right:35px;
+}
+#kome{
+    border:solid 3px #00ffff;
+    padding-right:35px;
+}
+td{
+    margin:0px;
+    border:solid 3px #00ffff;
+}
+th{
+    padding: 0px 0px 0px 0px;
+    border:solid 3px #00ffff;
+}
+#listbox{
+    padding:0px 0px 15px 0px;
+}
+footer
+{
+    border:solid 3px #00ffff;
+    background:gold;
+    padding:10px 10px;
+    border-radius:10px 10px 10px 10px;
+    margin:0px 0px 0px 0px;
+}
+
+
+@media screen and (max-width:500px)
+{
+  table{
+        widows:700px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .square_btn {
+        position: relative;
+        display: inline-block;
+        padding: 0.25em 0.5em;
+        text-decoration: none;
+        color: #FFF;
+        background: #03A9F4;/*色*/
+        border: solid 1px #0f9ada;/*線色*/
+        border-radius: 4px;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+        text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    }
+    
+    .square_btn:active {/*押したとき*/
+        border: solid 1px #03A9F4;
+        box-shadow: none;
+        text-shadow: none;
+    }
+    #btn1{
+        margin:0px 0px 10px 10px;
+    }
+    #btn2{
+        margin:0px 0px 10px 230px;
+    }
+    #nomal{
+        margin:0px 0px 10px 10px;
+    }
+    #list{
+        margin:0px 0px 10px 230px;
+    }
+    #tuki{
+        border:solid 3px #00ffff;
+        background:gold;
+        text-align:center;
+        padding:30px 30px;
+        border-radius:10px 10px 10px 10px;
+    }
+    #spe{
+        padding:0px 90px 0px 0px;
+    }
+    #day{
+        padding:10px 90px 10px 0px;  
+    }
+    th{
+        margin-left: 10px;
+        padding: 0px 100px 0px 0px;
+        border:solid 3px #00ffff;
+    }
+    #hiz{
+      padding:0px 80px 0px 0px;
+    }
+    #man{
+        border:solid 3px #00ffff;
+        padding:10px 80px 10px 0px;
+    }
+    #kome{
+        border:solid 3px #00ffff;
+        padding-right:30px;    
+    }
+    td{
+        margin:0px;
+        border:solid 3px #00ffff;
+    }
+    
+    #listbox{
+        padding:0px 0px 15px 0px;
+    }
+    footer
+    {
+        border:solid 3px #00ffff;
+        background:gold;
+        padding:10px 10px;
+        border-radius:10px 10px 10px 10px;
+        margin:0px 0px 0px 0px;
+    }
+} 
+

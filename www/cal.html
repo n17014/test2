@@ -1,0 +1,86 @@
+
+<html>
+<head>
+<link rel="stylesheet" href="css/cal.css">
+
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+$(function() {
+    const today = new Date();
+    let myYear = today.getFullYear();
+    let myMonth = today.getMonth()+1;
+    $('#btn1').click( () => {
+        myMonth -= 1;
+        if (myMonth == 0) {
+            myYear--;
+            myMonth = 12;
+        }
+        getNearMonth()
+    });
+    $('#btn2').click(function () {
+        myMonth +=1;
+        if (myMonth == 13) {
+            myYear++;
+            myMonth = 1;
+        }
+
+        getNearMonth()
+    });
+    tuki = myYear+"年"+ myMonth + "月のカレンダー";
+//月末を取得
+    const getNearMonth = () => {
+        let lastday = new Date(myYear, myMonth, 0);
+        lastday = lastday.getDate();
+        let wak = "";
+        for (let i = 1; i <= lastday; i++) {
+            xday = new Date(myYear, myMonth-1, i);
+            console.log(myMonth);
+            xdays = xday.getDay();
+            console.log(xday);
+            weekjp = new Array("日", "月", "火", "水", "木", "金", "土");
+            weeks = weekjp[xdays];
+            wak += "<tr>\n";
+            wak += "<th>" + weeks + "</th>\n";
+            wak += "<td id=day>" + i + "</td>\n";
+            wak += "<td id=spe></td>\n";
+            wak += "</tr>\n";
+        }
+        $("#tuki").empty();
+        tuki = myYear+"年"+　myMonth+ "月のカレンダー";
+        $("#listbox").empty();
+        $("#tuki").append(tuki);
+        $("#listbox").append(wak);
+    }
+    getNearMonth()
+});
+</script>
+
+
+<h2 id="tuki"></h2>
+
+
+<button id="btn1" class="square_btn">前月</button>
+<button id="btn2" class="square_btn">次月</button>
+
+
+<table id="template" class="schedule">
+    <tr>
+        <th id="man">曜日</th>
+        <th id="hiz">日付</th>
+        <th id="kome">コメント</th>
+    </tr>
+</table>
+
+<table id="listbox" class="schedule">
+    <tr>
+
+    </tr>
+</table>
+        <button  id="nomal" class="square_btn"><a href="calender2.html">通常</a></button>
+        <button  id="list" class="square_btn"><a href="cal.html">リスト</a></button>
+        <footer></footer>
+    </body>
+</html>
